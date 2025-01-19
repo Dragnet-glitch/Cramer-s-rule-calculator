@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Fill 90% of the screen width */
+    max-width: 600px; /* Limit for larger screens */
+    height: 80%; /* Fill 80% of the screen height */
+    max-height: 700px; /* Limit for larger screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 24px; /* Adjusted for better visibility */
+    text-align: center;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Allow it to expand within the container */
+    overflow-y: auto; /* Add scrolling for larger content */
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.row input {
+    width: 20%; /* Relative to the row */
+    min-width: 50px; /* Ensure inputs don't shrink too much */
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    flex-grow: 1; /* Distribute input sizes evenly */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    flex-grow: 1; /* Buttons fill their container proportionally */
+    margin: 0 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .calculator-container {
+        width: 100%; /* Full width on small screens */
+        height: 100%; /* Full height on small screens */
+        max-width: none; /* Remove width constraint */
+        max-height: none; /* Remove height constraint */
+        border-radius: 0; /* No rounded edges */
+        padding: 10px; /* Reduced padding */
+    }
+
+    h1 {
+        font-size: 20px; /* Smaller header */
+    }
+
+    .row input {
+        width: 18%; /* Adjusted for smaller rows */
+        height: 35px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}

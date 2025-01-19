@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator (Cramer's Rule)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Matrix Calculator (Cramer's Rule)</h1>
+        <h2>Example:<br> 6x + 5x = 49<br>
+            3y + 4y = 32 </h2>
+            <h2>then: <br>
+            6(a) |  5(b) | x | 49(c)<br>
+            3(c) |  4(d)  | y | 32(c)</h2>
+      
+
+        <div class="matrix" id="matrix">
+            <!-- Matrix Rows -->
+            <div class="row">
+                <input type="number" id="a11" placeholder="a">
+                <input type="number" id="a12" placeholder="b">
+                <input type="text" id="a13" placeholder="x">
+                <input type="number" id="b1" placeholder="C">
+            </div>
+            <div class="row">
+                <input type="number" id="a21" placeholder="c">
+                <input type="number" id="a22" placeholder="d">
+                <input type="text" id="a23" placeholder="y">
+                <input type="number" id="b2" placeholder="C">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="press">Calculate</button>
+            <button>Reset</button>
+        </div>
+
+        <div class="result" id="result"></div>
+        <div class="error" id="error"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
